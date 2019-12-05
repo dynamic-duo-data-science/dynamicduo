@@ -1,0 +1,5 @@
+,Unnamed: 0,Port Name,State,Port Code,Border,Date,Measure,Value,Location,location_x,location_y,year,month,agg_month,day_of_the_week,is_week_day
+2804,2804,Calexico East,California,2507,US-Mexico Border,2018-12-01,Trucks,29704,POINT (-115.48433000000001 32.67524),-115.48433,32.67524,2018,12,276,5,0
+5077,5077,Calexico East,California,2507,US-Mexico Border,2018-09-01,Trucks,29426,POINT (-115.48433000000001 32.67524),-115.48433,32.67524,2018,9,273,5,0
+27238,27238,Calexico,California,2503,US-Mexico Border,2016-07-01,Trucks,0,POINT (-115.49999999999999 32.66),-115.5,32.66,2016,7,247,4,1
+28650,28650,San Ysidro,California,2504,US-Mexico Border,2016-06-01,Trucks,0,POINT (-117.03 32.54),-117.03,32.54,2016,6,246,2,1
