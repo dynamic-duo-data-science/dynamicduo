@@ -25,16 +25,95 @@ Border-crossing entry dataset overview
 # Dataset Visualization
 
 
+
 # Regression Analysis
+
 
 
 # Anomaly Detection
 
 Applied and compared 2 anomaly detection algorithms: isolation forest and one class SVM
 
+1. Isolation Forest, with 5% contamination, 200 estimators
+
+detected anomalies on different subsets:
+![anml_by_IF](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/anomaly_detection/breakdown_CA_IF_1.png)
+
+visualize using t-SNE:
+![IF_tSNE](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/anomaly_detection/tSNE_2d_CA_IF.png)
+
+2. One Class SVM, with 5% contamination, RBF kernel
+
+monthly distribution of anomalies:
+![OCS_monthly](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/anomaly_detection/hist_monthly_value_us_mx_OCS.png)
+
+3D interactive comparison with isolation forest:
+Click [me](https://htmlpreview.github.io/?https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/anomaly_detection/3D_comparison_US_MX.html)
+
 
 
 # Time Series Analysis
+
+1. Decomposition. Shows trend, seasonality and residual of various breakdown subsets.
+
+![decomp_AL](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/decomposition_alaska.png)
+![decomp_trucks](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/decomposition_trucks.png)
+
+2. ARIMA
+
+- plot rolling mean & std and utilize AD-Fuller test for confirming stationarity.
+
+![arima_rolling_mean_AL](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/rolling_mean_std_alaska.png)
+
+- determine p, d, q using autocorrelation & partial autocorrelation.
+
+![ac_partial_ac_AL](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/alaska_autocorr_partial_ac.png)
+
+- verify hyperparameters using grid search
+
+3. SARIMAX. Since a strong seasonal pattern has been observed, we used SARIMAX here provided by statsmodel.
+
+- train SARIMAX to fit seasonal patterns
+
+![sarimax_fit_AL](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/SARIMAX_fit_alaska.png)
+
+- SARIMAX model fitting diagnostics
+
+![sarimax_diagn_AL](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/SARIMAX_diagnostics_alaska.png)
+
+- SARIMAX prediction (on Alaska subset)
+
+![sarimax_predict_AL](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/SARIMAX_predict_alaska.png)
+
+- SARIMAX prediction (on US-Canada border subset)
+
+![sarimax_predict_us_ca](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/SARIMAX_predict_us_ca.png)
+
+4. Time series reasoning. Try to do case study and reasoning for time series patterns.
+
+- strong correlation between border-crossing behavior with climate in northern states
+
+![corr_minnesota_climate](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/compare_value_climate_minnesota.png)
+![corr_miane_climate](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/compare_value_climate_maine.png)
+
+- weak correlation between border-crossing behavior with climate in other states
+
+![corr_arizona_climate](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/compare_value_climate_arizona.png)
+
+- weak correlation between border-crossing behavior with GDP
+
+![corr_NY_GDP](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/compare_value_gdp_NY.png)
+![corr_trucks_GDP](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/compare_value_gdp_trucks.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
