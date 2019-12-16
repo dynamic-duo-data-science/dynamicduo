@@ -6,6 +6,7 @@ A data science project on the US cross border entry dataset from 1996 to 2019 th
 - predict the border cross entry value using regression models
 - apply time series analysis on the border crossing seasonal patterns
 - detect anomalies in the dataset for case study and for other components
+- do visualization and storytelling in various parts for data comprehension and reasoning
 
 # Dataset used:
 
@@ -37,18 +38,22 @@ Applied and compared 2 anomaly detection algorithms: isolation forest and one cl
 1. Isolation Forest, with 5% contamination, 200 estimators
 
 detected anomalies on different subsets:
+
 ![anml_by_IF](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/anomaly_detection/breakdown_CA_IF_1.png)
 
 visualize using t-SNE:
+
 ![IF_tSNE](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/anomaly_detection/tSNE_2d_CA_IF.png)
 
 2. One Class SVM, with 5% contamination, RBF kernel
 
 monthly distribution of anomalies:
+
 ![OCS_monthly](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/anomaly_detection/hist_monthly_value_us_mx_OCS.png)
 
 3D interactive comparison with isolation forest:
-Click [me](https://htmlpreview.github.io/?https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/anomaly_detection/3D_comparison_US_MX.html)
+
+[Click Me](https://htmlpreview.github.io/?https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/anomaly_detection/3D_comparison_US_MX.html)
 
 
 
