@@ -25,10 +25,57 @@ Border-crossing entry dataset overview
 
 # Dataset Visualization
 
+This line graph displays the overall trend of traffic, ignoring port and transport information.
 
+![total_trend](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/visualization/total_trend.png)
+
+This graph does the same, but graphs each year on top each other in order to show the common yearly cycles.
+
+![yearly_trend](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/visualization/yearly_trend.png)
+
+Here, we graph each port separately.
+
+![by_port](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/visualization/by_port.png)
+
+Now, we graph each transport separately.
+
+![by_transport](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/visualization/by_transport.png)
+
+Finally, we attempt to graph both port and transport. Note each row has a share y-axis scale.
+
+![by_both](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/visualization/by_both.png)
+
+See the relevant notebook for more discussion on the graphs, and more visualizations of the data.
 
 # Regression Analysis
 
+1. Random Forest
+- Parameters:
+  - Trees per forest: 100
+  - Max depth: 100
+- Results:
+  - R^2 value: 0.9893
+  - Mean absolute error: 1875
+  - Median absolute error: 15.1
+
+2. XGBoost
+- Parameters:
+  - Trees per forest: 10
+  - Max depth: 100
+  - Learning rate: 0.3
+  - Number of rounds: 10
+- Results:
+  - Mean absolute error: 2022
+  - Median absolute error: 13.23
+
+3. Neural Network
+- Parameters:
+  - Hidden layers: 6
+  - Loss function: mean absolute error
+  - Optimizer: Adam
+- Results:
+  - Mean absolute error: 4841
+  - Median absolute error: 376.6
 
 
 # Anomaly Detection
@@ -109,16 +156,3 @@ monthly distribution of anomalies:
 
 ![corr_NY_GDP](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/compare_value_gdp_NY.png)
 ![corr_trucks_GDP](https://github.com/dynamic-duo-data-science/dynamicduo/blob/master/reports/figures/time_series/compare_value_gdp_trucks.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
